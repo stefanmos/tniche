@@ -1,0 +1,81 @@
+// Custom SASS
+
+section
+  padding: 15vh 0
+
+.logo
+  width: 140px
+  display: block
+  margin: auto
+
+header
+  background: rgba(250, 250, 250, .7)
+  background-image: url("../img/header.jpg")
+  background-size: cover
+  background-position: right center
+  padding-bottom: 10vh
+  h1
+    background: linear-gradient(-90deg, #E2D3A9 0%, #B5A26C 100%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+
+.cover
+  background: #E1E1E1
+  background-size: cover
+  height: 90vh
+
+.winter
+  background-image: url("../img/bk.jpg")
+
+.summer
+  background-image: url("../img/bk2.jpg")
+
+.summer2016
+  background-image: url("../img/bk3.jpg")
+
+.project
+  border: 10px solid rgba(0 , 0, 0, 0)
+  // background: rgba(255, 255, 255, .6)
+  margin-top: 10vh
+  z-index: 2
+  &:hover
+    border-color: #ff0000 #0000ff
+
+.draw
+  border: 0
+  box-sizing: border-box
+  box-shadow: inset 0 0 0 6px rgba(0 , 0, 0, 0)
+  position: relative
+  &::before, &::after
+    box-sizing: inherit
+    content: ''
+    position: absolute
+    width: 100%
+    height: 100%
+  &::before, &::after
+    border: 6px solid transparent
+    width: 0
+    height: 0
+  &::before
+    top: 0
+    left: 0
+  &::after
+    bottom: 0
+    right: 0
+  &:hover::before, &:hover::after
+    width: 100%
+    height: 100%
+  &:hover::before
+    border-top-color: #C8B680
+    border-right-color: #C8B680
+    transition: width 0.25s ease-out, height 0.25s ease-out 0.25s
+  &:hover::after
+    border-bottom-color: #C8B680
+    border-left-color: #C8B680
+    transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s
+
+footer
+  padding: 15vh 0
+  text-align: center
+  h6
+    margin: 20px 0
